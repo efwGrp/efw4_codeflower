@@ -43,12 +43,13 @@ var json=
 		function createCodeFlower (json) {
 			var size=window.innerWidth>window.innerHeight?window.innerHeight:window.innerWidth;
 			if (currentCodeFlower) currentCodeFlower.cleanup();
-			currentCodeFlower = new CodeFlower("body", size, size).update(json);
+			currentCodeFlower = new CodeFlower("body", 700, 700).update(json);
+			document.body.style.zoom=size/700;
 		};
 	</script>
 </head>
 
-<body style="text-align:center" onload="createCodeFlower(json)">
+<body style="text-align:center;over-flow:hidden;margin:0px;" onload="createCodeFlower(json)">
 </body>
 
 </html>
