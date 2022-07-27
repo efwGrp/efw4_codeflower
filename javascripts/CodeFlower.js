@@ -122,7 +122,7 @@ CodeFlower.prototype.click = function(d) {
 
 CodeFlower.prototype.mouseover = function(d) {
   this.text.attr('transform', 'translate(' + d.x + ',' + (d.y - 5 - (d.children ? 3.5 : Math.sqrt(d.size) / 2)) + ')')
-    .text(d.name + ": " + d.size + " loc")
+    .text(d.name+(d.showSize!=undefined?": "+d.showSize:""))// + ": " + d.size + " loc"
     .style('display', null);
 };
 
