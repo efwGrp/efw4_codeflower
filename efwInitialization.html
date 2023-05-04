@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Load plotly.js into the DOM -->
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src='https://cdn.plot.ly/plotly-2.20.0.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script>
+</head>
+
+<body style="overflow:hidden">
+	<div id='myDiv'></div>
+	<table border=1 id="tblData" style="display:none">
+<!----------------------------------------->
+	<tr><td x=0.1 y=5>[tomcat]</td><td x=1 y=5>[myApp]</td><td x=2 y=5>web.xml</td><td x=3 y=4.5>efw.efwServlet.java</td></tr>
+		<td>[myApp]</td><td x=2 y=6>context.xml</td>
+	<tr><td x=1 y=10>[myBatch]</td><td x=3 y=9>efw.efwBatch.java</td></tr>
+
+	<tr><td>efw.efwServlet.java</td><td x=4 y=1>efw.PropertiesManager.java</td></tr>
+	<tr><td>efw.efwServlet.java</td><td x=4 y=2>efw.LogManager.java</td></tr>
+	<tr><td>efw.efwServlet.java</td><td x=4 y=3>efw.FormatManager.java</td></tr>
+	<tr><td>efw.efwServlet.java</td><td x=4 y=4>efw.SqlManager.java</td></tr>
+	<tr><td>efw.efwServlet.java</td><td x=4 y=5>efw.I18nManager.java</td></tr>
+	<tr><td>efw.efwServlet.java</td><td x=4 y=6>efw.FileManager.java</td></tr>
+	<tr><td>efw.efwServlet.java</td><td x=4 y=7>efw.RemoteEventManager.java</td></tr>
+	<tr><td>efw.efwServlet.java</td><td x=4 y=8>efw.DatabaseManager.java</td><td x=5.5 y=8>efw.BatchDataSource.java</td></tr>
+	<tr><td>efw.efwServlet.java</td><td x=4 y=9>efw.MailManager.java</td></tr>
+	<tr><td>efw.efwServlet.java</td><td x=4 y=10.5>efw.efwCorsFilter.java</td><td x=5.5 y=10.5>EfwAuthBean</td></tr>
+	<tr><td>efw.efwServlet.java</td><td x=4 y=13>efw.ScriptManager.java</td></tr>
+
+	<tr><td>efw.efwBatch.java</td><td>efw.PropertiesManager.java</td></tr>
+	<tr><td>efw.efwBatch.java</td><td>efw.LogManager.java</td></tr>
+	<tr><td>efw.efwBatch.java</td><td>efw.FormatManager.java</td></tr>
+	<tr><td>efw.efwBatch.java</td><td>efw.SqlManager.java</td></tr>
+	<tr><td>efw.efwBatch.java</td><td>efw.I18nManager.java</td></tr>
+	<tr><td>efw.efwBatch.java</td><td>efw.FileManager.java</td></tr>
+	<tr><td>efw.efwBatch.java</td><td>efw.RemoteEventManager.java</td></tr>
+	<tr><td>efw.efwBatch.java</td><td>efw.DatabaseManager.java</td></tr>
+	<tr><td>efw.efwBatch.java</td><td>efw.MailManager.java</td></tr>
+	<tr><td>efw.efwBatch.java</td><td x=4 y=11.5>efw.BrmsManager.java</td></tr>
+	<tr><td>efw.efwBatch.java</td><td>efw.ScriptManager.java</td></tr>
+
+	
+
+	<tr><td>efw.ScriptManager.java</td><td x=6 y=24>efw.doInit.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=13>efw.server.messages.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=14>efw.server.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=15>efw.server.format.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=16>efw.server.properties.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=17>efw.server.session.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=18>efw.server.db.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=19>efw.server.event.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=20>efw.server.file.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=21>efw.server.brms.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=22>efw.server.mail.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=23>efw.server.record.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=24>efw.server.result.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=25>efw.server.excel.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=26>efw.server.batch.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=27>efw.server.cookie.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=28>efw.server.barcode.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=29>efw.server.csv.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=30>efw.server.txt.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=31>efw.server.binary.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=32>efw.server.threads.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=33>efw.server.debug.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=34>efw.server.rest.js</td></tr>
+	<tr><td>efw.doInit.js</td><td x=7 y=35>efw.server.doHandles.js</td></tr>
+
+	<tr><td>efw.doInit.js</td><td x=7 y=43>[/elfinder/]init.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=37>elfinder_cmds.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=38>elfinder_download.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=39>elfinder_duplicate.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=40>elfinder_file.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=41>elfinder_ls.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=42>elfinder_mkdir.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=43>elfinder_mkfile.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=44>elfinder_open.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=45>elfinder_parents.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=46>elfinder_paste.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=47>elfinder_rename.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=48>elfinder_rm.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=49>elfinder_size.js</td></tr>
+	<tr><td>[/elfinder/]init.js</td><td x=8 y=50>elfinder_tree.js</td></tr>
+
+		<tr><td x=9 y=15> </td><td x=9 y=15>efw.framework.java</td></tr>
+		<tr><td x=9 y=15> </td><td x=9 y=15>efw.framework.java</td></tr>
+		<tr><td x=9 y=15> </td><td x=9 y=15>efw.framework.java</td></tr>
+		<tr><td x=9 y=15> </td><td x=9 y=15>efw.framework.java</td></tr>
+		<tr><td x=9 y=15> </td><td x=9 y=15>efw.framework.java</td></tr>
+	</table>
+
+</body>
+<script>
+var objLabel={};
+var label=[];
+var color=[];
+var source=[];
+var target=[];
+var value=[];
+var x=[];
+var y=[];
+var sumCountX=9.5;
+var sumCountY=50;
+$("#tblData tr").each(function(){
+	var row=[];
+	var preV="";
+	$("td",this).each(function(){
+		var v=$(this).text();
+		if (v!=null&&v!=""){
+			if (objLabel[v]==null){
+				label.push(v);
+				if (v.indexOf("/")==0||v.indexOf("c:")==0){
+					color.push("silver");
+				}else if (v.indexOf(".java")>-1){
+					color.push("red");
+				}else if (v.indexOf(".jsp")>-1){
+					color.push("orange");
+				}else if (v.indexOf(".js")>-1||v=="Efw(\"myEvent\")"){
+					color.push("yellow");
+				}else if (v.indexOf(".xml")>-1||v=="efw.tld"){
+					color.push("green");
+				}else if (v.indexOf(".css")>-1){
+					color.push("cyan");
+				}else if (v.indexOf("efw.server")>-1||v=="efw.doInit.js"||v=="efw.doHandles.js"){
+					color.push("orange");
+				}else{
+					color.push("blue");//TODO
+				}
+				objLabel[v]=label.length-1;
+				if ($(this).attr("x")!=null){
+					x.push($(this).attr("x")/sumCountX);
+					y.push($(this).attr("y")/sumCountY);
+				}else{
+					x.push(0);
+					y.push(0);
+				}
+			}
+			if (preV!=null&&preV!=""){
+				source.push(objLabel[preV]);
+				target.push(objLabel[v]);
+				value.push(1);
+			}
+			preV=v;
+		}
+		
+	});
+
+});
+
+var data=[{type:"sankey",orientation:"h",
+			node:{pad:10,thickness:10,line:{color:"black",width:1},label:label,color:color,x:x,y:y},
+			link:{source:source,target:target,value:value}
+		}];
+var layout = {title: "Efw初期化のモジュール関係図（Module Relationship Diagram of Efw Initialization）",font:{size:10},width: $( window ).width(),height: $( window ).height(),}
+Plotly.react("myDiv",data,layout);
+
+</script>
+</html>
