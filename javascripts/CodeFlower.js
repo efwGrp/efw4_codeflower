@@ -77,7 +77,7 @@ CodeFlower.prototype.update = function(json) {
 			var nm=d.name;
 			var ext=nm.substring(nm.lastIndexOf(".")).toLowerCase();
 			var c=0;
-			if (ext==".java"){//red
+			if (ext==".java"||ext==".cs"){//red
 				c=0;return "hsl("+c+",90%,60%)";
 			}else if (ext==".jsp"||ext==".html"||ext==".htm"){//orange
 				c=30;return "hsl("+c+",90%,60%)";
