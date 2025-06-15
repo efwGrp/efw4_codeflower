@@ -79,7 +79,7 @@ CodeFlower.prototype.update = function(json) {
 			var c=0;
 			if (ext==".java"||ext==".cs"){//red
 				c=0;return "hsl("+c+",90%,60%)";
-			}else if (ext==".jsp"||ext==".html"||ext==".htm"){//orange
+			}else if (ext==".jsp"||ext==".html"||ext==".htm"||ext==".aspx"){//orange
 				c=30;return "hsl("+c+",90%,60%)";
 			}else if (ext==".js"){//yellow
 				c=60;return "hsl("+c+",90%,60%)";
